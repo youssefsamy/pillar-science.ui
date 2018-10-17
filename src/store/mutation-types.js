@@ -1,0 +1,5 @@
+export const SET_USER = 'SET_USER'
+export const CLEAR_USER = 'CLEAR_USER'
+export const SET_STATUS_CODE = 'SET_STATUS_CODE'
+export const UPDATE_FORM = 'UPDATE_FORM'
+export const SET_PROJECT = 'SET_PROJECT'

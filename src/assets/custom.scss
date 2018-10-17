@@ -1,0 +1,86 @@
+ul.menu-list li.is-disabled a {
+  color: $grey-light;
+  cursor: not-allowed;
+}
+
+label.upload.is-fullwidth > div {
+  width: 100%;
+}
+
+.is-pointer {
+  cursor: pointer;
+}
+
+.uploadButton input[type="file"] {
+  cursor:pointer;
+  position:absolute;
+  top:0;
+  opacity:0;
+}
+
+.uploadButton {
+  position:relative;
+  overflow:hidden;
+  height:32px;
+  cursor:pointer;
+  width:32px;
+}
+
+.container-fluid {
+  margin: 0 5%;
+}
+
+/* QuillJS Snow Theme override */
+.ql-toolbar.ql-snow {
+  background-color: #ececec;
+}
+
+.modal.overflow-visible,
+.modal.overflow-visible .modal-card,
+.modal.overflow-visible .modal-card .modal-card-body,
+.modal.overflow-visible .b-tabs,
+.modal.overflow-visible .b-tabs .tab-content,
+.modal.overflow-visible .b-tabs .tab-content .tab-item{
+  overflow: visible;
+}
+
+button.button.is-circle {
+  border-radius: 50%;
+}
+
+.has-text-vertically-centered {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.dropdown-item,
+.navbar-item,
+a.button {
+  svg:first-child {
+    margin-right: 7px;
+  }
+}
+
+.dropdown-item,
+.navbar-item,
+a.button {
+  svg:last-child{
+    margin-left: 5px;
+  }
+}
+
+.button.is-not-interactive {
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    &.is-#{$name} {
+      &,
+      &:active,
+      &:hover,
+      &:focus {
+        outline: $color;
+        cursor: default;
+        background-color: $color;
+      }
+    }
+  }
+}

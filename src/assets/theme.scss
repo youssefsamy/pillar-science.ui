@@ -1,0 +1,44 @@
+// Import Bulma's core
+@import "~bulma/sass/utilities/_all";
+@import "~bulma-steps-component/bulma-steps";
+
+// Set your colors
+$primary: #3498D8; // Changed value
+$primary-invert: findColorInvert($primary);
+$primary-light: #BFBBBA;
+$primary-light-invert: findColorInvert($primary-light);
+$gray: #d3d3d3;
+$gray-invert: findColorInvert($gray);
+$twitter: #4099FF;
+$twitter-invert: findColorInvert($twitter);
+$body-background-color: whitesmoke;
+
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: (
+        "white": ($white, $black),
+        "black": ($black, $white),
+        "light": ($light, $light-invert),
+        "gray": ($gray, $gray-invert),
+        "dark": ($dark, $dark-invert),
+        "primary": ($primary, $primary-invert),
+        "primary-light": ($primary-light, $primary-light-invert),
+        "info": ($info, $info-invert),
+        "success": ($success, $success-invert),
+        "warning": ($warning, $warning-invert),
+        "danger": ($danger, $danger-invert),
+        "twitter": ($twitter, $twitter-invert)
+);
+
+// Links
+$link: $primary;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
+
+
+:export {
+  primary: $primary;
+  info: $info;
+  success: $success;
+  warning: $warning;
+  danger: $danger;
+}
